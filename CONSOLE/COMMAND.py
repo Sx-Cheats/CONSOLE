@@ -11,7 +11,7 @@ class _SHELL_():
 
         self._COMMAND_ ={
             "cls":lambda : CLS(),
-            "print":lambda COLOR = None,_err:  PRINT(COLOR,_err),
+            "print":lambda COLOR = None,_err=False:  PRINT(COLOR,_err),
             "system":lambda: Command_System(),
             "setcolor":lambda: SET_COLOR(),
             "exit":lambda: __import__("os")._exit(0),
@@ -43,7 +43,7 @@ class _SHELL_():
                 self.SHELL_COMMAND = f"-Error to set color !"
                 PRINT("(255,0,0",True)
 
-        def PRINT(COLOR,_err=False):
+        def PRINT(COLOR,_err):
             if _err: 
                  NAME = "ERROR_PLAIN_TEXT" 
             else:
