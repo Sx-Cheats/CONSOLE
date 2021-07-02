@@ -5,7 +5,7 @@ class EXAMPLE(InitUI):
             self._COMMAND_["newcommand"] = lambda: PRINT()
             def PRINT():
                self.SHELL_COMMAND = "-HELLO WORLD !"
-               self._COMMAND_["print"]("(0, 255, 0")
+               self._COMMAND_["print"]("(0, 255, 0",False)
               
             self.BackGroundMenu.show()
             sys.exit(self.app.exec_())
