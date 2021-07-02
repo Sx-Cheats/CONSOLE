@@ -62,7 +62,7 @@ class _SHELL_():
             plainTextEdit.setUndoRedoEnabled(True)
             plainTextEdit.setLineWrapMode(QtWidgets.QPlainTextEdit.NoWrap)
             plainTextEdit.setReadOnly(True)
-            plainTextEdit.setPlainText(re.sub("^print","",self.SHELL_COMMAND).strip()[1:]+"\n")
+            plainTextEdit.setPlainText(re.sub("^print","",self.SHELL_COMMAND)[1:]+"\n")
             plainTextEdit.setOverwriteMode(False)
             plainTextEdit.setTabStopWidth(695)
             plainTextEdit.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
