@@ -13,7 +13,7 @@ class _SHELL_():
             "cls":lambda : CLS(),
             "print":lambda COLOR = None,_err = False:  PRINT(COLOR,_err),
             "system":lambda: Command_System(),
-            "setcolor":lambda: SET_COLOR(self),
+            "setcolor":lambda: SET_COLOR(),
             "exit":lambda: __import__("os")._exit(0),
             "help": lambda:HELP()
         }
@@ -24,7 +24,7 @@ class _SHELL_():
                 self.SHELL_COMMAND = "-"+subprocess.getoutput("powershell -Command "+re.sub("system","",self.SHELL_COMMAND.strip().lower())[1:])
                 PRINT(None,False)
 
-        def SET_COLOR(self):
+        def SET_COLOR():
             try:
                 COLOR = str(eval(re.sub("setcolor","",self.SHELL_COMMAND.strip().lower())[1:]))[:-1]
                 self.Print_Color = COLOR
