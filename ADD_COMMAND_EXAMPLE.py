@@ -2,7 +2,7 @@ from __Init_CMD__ import InitUI
 class EXAMPLE(InitUI): 
       def __init__(self) -> None:
             super(EXAMPLE,self).__init__()
-            self._COMMAND_["PRINT"] = lambda: PRINT()
+            self._COMMAND_["newcommand"] = lambda: PRINT()
             def PRINT():
                self.SHELL_COMMAND = "-HELLO WORLD !"
                self._COMMAND_["print"]("(0, 255, 0")
