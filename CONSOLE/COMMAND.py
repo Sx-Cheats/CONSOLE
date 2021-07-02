@@ -19,7 +19,7 @@ class _SHELL_():
         }
         def HELP(): 
           self.SHELL_COMMAND = "\n-⚫ Use CLS to clear the commands\n\n⚫ Use print-Your_Text_Here to print your text in the console\n\n⚫ Use system-command to call  system commands( example: system-date )\n\n⚫ Use setcolor-(r,g,b) to change color in console\n\n⚫ Use exit to exit the console"
-          PRINT(None)
+          PRINT(None,False)
         def Command_System():
                 self.SHELL_COMMAND = "-"+subprocess.getoutput("powershell -Command "+re.sub("system","",self.SHELL_COMMAND.strip().lower())[1:])
                 PRINT(None,False)
