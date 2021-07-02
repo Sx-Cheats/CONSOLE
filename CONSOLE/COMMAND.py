@@ -38,7 +38,7 @@ class _SHELL_():
                             else: 
                                 x2.setStyleSheet(f"font: 900 9pt 'MS Shell Dlg 2';\ncolor: rgb{COLOR+',0.93)'};\nbackground-color: Transparent;\nselection-color: rgb(0, 0, 0);\nselection-background-color:rgb{COLOR+',0.80)'};")
                 self.SHELL_COMMAND = f"-Current Color: {COLOR})"
-                PRINT(None)
+                PRINT(None,False)
             except:
                 self.SHELL_COMMAND = f"-Error to set color !"
                 PRINT("(255,0,0",True)
@@ -73,6 +73,7 @@ class _SHELL_():
             self.LINE.append([plainTextEdit,plainTextEdit])
             self.UI.verticalLayout_2.addWidget(plainTextEdit)
             self._New_Line()
+            
         def CLS():
             for x in self.LINE[2:]:
                     x[0].deleteLater()
