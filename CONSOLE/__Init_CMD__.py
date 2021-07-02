@@ -1,7 +1,3 @@
-
-#./CMD
-
-
 import sys,os
 from CMD import *
 import re
