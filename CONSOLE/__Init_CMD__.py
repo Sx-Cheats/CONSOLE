@@ -104,7 +104,6 @@ class InitUI(_SHELL_):
         self.BackGroundMenu.show()
         sys.exit(self.app.exec_())
 
-__import__("ctypes").windll.user32.ShowWindow(__import__("ctypes").windll.kernel32.GetConsoleWindow(), 0 )
 InitUI()
 
 
