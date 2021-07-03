@@ -27,6 +27,7 @@ class _SHELL_():
         def SET_COLOR():
             try:
                 COLOR = str(eval(re.sub("setcolor","",self.SHELL_COMMAND.strip().lower())[1:]))[:-1]
+                if len(COLOR) != 3: raise ValueError()
                 self.Print_Color = COLOR
                 for x in self.LINE:
                    for x2 in x:
