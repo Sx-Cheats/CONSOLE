@@ -27,20 +27,17 @@ class _SHELL_():
         def SET_COLOR():
             try:
                 COLOR = eval(re.sub("setcolor","",self.SHELL_COMMAND.strip().lower())[1:])
-                if type(COLOR) != tuple or len(COLOR) != 3: raise ValueError()
-                for x in COLOR:
-                    if type(x) != int:  raise ValueError()
-                COLOR = str(COLOR)[:-1]
-                self.Print_Color = COLOR
+                if type(COLOR) != tuple or len(COLOR) != 3 or sum(COLOR) > 765: raise ValueError()
+                self.Print_Color = str(COLOR)[:-1]
                 for x in self.LINE:
                    for x2 in x:
                         if x2.objectName() != "ERROR_PLAIN_TEXT":
                             if x2.objectName() == "PLAIN_TEXT":
-                                  x2.setStyleSheet(f"font: 900 9pt 'MS Shell Dlg 2';\nselection-color: rgb(0, 0, 0);\npadding-top:8px;\ncolor:rgb{COLOR});\nselection-background-color:rgb{COLOR});")
+                                  x2.setStyleSheet(f"font: 900 9pt 'MS Shell Dlg 2';\nselection-color: rgb(0, 0, 0);\npadding-top:8px;\ncolor:rgb{self.Print_Color});\nselection-background-color:rgb{self.Print_Color});")
                             elif x2.objectName() == "FROM_PATH":
-                                x2.setStyleSheet(f"color: rgb{COLOR+',0.80)'};\n" "background-color: Transparent;\nselection-color: rgb(0, 0, 0);") 
+                                x2.setStyleSheet(f"color: rgb{self.Print_Color+',0.80)'};\n" "background-color: Transparent;\nselection-color: rgb(0, 0, 0);") 
                             else: 
-                                x2.setStyleSheet(f"font: 900 9pt 'MS Shell Dlg 2';\ncolor: rgb{COLOR+',0.93)'};\nbackground-color: Transparent;\nselection-color: rgb(0, 0, 0);\nselection-background-color:rgb{COLOR+',0.80)'};")
+                                x2.setStyleSheet(f"font: 900 9pt 'MS Shell Dlg 2';\ncolor: rgb{self.Print_Color+',0.93)'};\nbackground-color: Transparent;\nselection-color: rgb(0, 0, 0);\nselection-background-color:rgb{self.Print_Color+',0.80)'};")
                 self.SHELL_COMMAND = f"-Current Color: {COLOR})"
                 PRINT(None,False)
             except:
