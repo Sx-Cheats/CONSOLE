@@ -26,7 +26,11 @@ class _SHELL_():
 
         def SET_COLOR():
             try:
-                COLOR = str(eval(re.sub("setcolor","",self.SHELL_COMMAND.strip().lower())[1:]))[:-1]
+                COLOR = eval(re.sub("setcolor","",self.SHELL_COMMAND.strip().lower())[1:])
+                if type(COLOR) != tuple or len(COLOR) != 3: raise ValueError()
+                for x in COLOR:
+                    if type(x) != int:  raise ValueError()
+                COLOR = str(COLOR)[:-1]
                 self.Print_Color = COLOR
                 for x in self.LINE:
                    for x2 in x:
