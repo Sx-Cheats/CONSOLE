@@ -143,10 +143,3 @@ class Ui_EXE(object):
         self.NOTICE.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border-bottom-width:0px;")
         self.NOTICE.setObjectName("NOTICE")
-
-        self.retranslateUi(EXE)
-        QtCore.QMetaObject.connectSlotsByName(EXE)
-
-    def retranslateUi(self, EXE):
-        EXE.setWindowTitle("Form")
-        self.NOTICE.setText("Use Help to see all available commands")
