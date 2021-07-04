@@ -27,7 +27,7 @@ class _SHELL_():
         def SET_COLOR():
             try:
                 COLOR = eval(re.sub("setcolor","",self.SHELL_COMMAND.strip().lower())[1:])
-                if type(COLOR) != tuple or len(COLOR) != 3 or sum(COLOR) > 765 or "-" in str(COLOR) : raise ValueError()
+                if type(COLOR) != tuple or len(COLOR) != 3 or sum(COLOR) > 765 or "-" in str(COLOR) : raise
                 self.Print_Color = str(COLOR)[:-1]
                 for x in self.LINE:
                    for x2 in x:
